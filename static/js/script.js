@@ -1,3 +1,7 @@
+console.log('Hello World from Carol')
+let year = document.getElementById('currentYear');
+year.innerHTML = new Date().getFullYear(); // this makes the year change
+
 window.addEventListener("DOMContentLoaded", function() {
   var navLinks = document.querySelectorAll(".navbar-nav a.nav-link");
   var sections = document.querySelectorAll("section");
