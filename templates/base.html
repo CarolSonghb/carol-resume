@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <!-- apply favicon  -->
+  <link rel="shortcut icon"
+    href="https://learn.lincoln.ac.nz/pluginfile.php/1/theme_lambda/favicon/1681274125/favicon.ico">
+  <!-- use css bootstrap templates -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <!-- Boxiocns CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- render the css static file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+
+  {% block head %} {% endblock %}
+</head>
+
+<body>
+  <header>
+    <div class="nav-container" id="navbar">
+      <div class="nav-left">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#section1">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section3">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section4">Education/Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section5">Photography</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <div class="nav-right">
+        <div class="site-title" style="font-weight: 500;">
+          <a href="/">CAROL SONG</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <main>
+    <h2 class="site-title" style="margin: 15% auto 0 10%;">MY RESUME</h2>
+    <h5 class="scrolldown fade-in" style="margin: 8% auto 0 20%">
+    Scroll down to learn more about me</h5>
+    <a href="/" class="button back-to-top">Back to Top</a>
+
+    <section id="section1">
+      {% include 'about.html' %}
+    </section>
+
+    <section id="section2">
+      {% include 'experience.html' %}
+    </section>
+    
+    <section id="section3">
+      {% include 'projects.html' %}
+    </section>
+
+    <section id="section4">
+      {% include 'education.html' %}
+    </section>
+
+    <section id="section5">
+      {% include 'photography.html' %}
+    </section>
+  </main>
+
+
+
+
+
+
+
+  <!-- render the js static file -->
+  <script src="/static/js/script.js"></script>
+
+
+
+</body>
+
+</html>
