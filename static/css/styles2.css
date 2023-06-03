@@ -11,11 +11,12 @@
     }
 
     .nav-right .site-title {
-        font-size: 10px;
+        font-size: 15px;
     }
     
     .resume {
-        display: none;
+        margin: 20% auto auto 50%;
+        font-size: 13px;
 
     }
 
