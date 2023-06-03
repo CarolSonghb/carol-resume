@@ -2,20 +2,20 @@ console.log('Hello World from Carol')
 let year = document.getElementById('currentYear');
 year.innerHTML = new Date().getFullYear(); // this makes the year change
 
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function () {
   var navLinks = document.querySelectorAll(".navbar-nav a.nav-link");
   var sections = document.querySelectorAll("section");
   var backToTopBtn = document.querySelector(".back-to-top");
 
   // Function to remove active class from all nav links
   function removeActiveClass() {
-    navLinks.forEach(function(link) {
+    navLinks.forEach(function (link) {
       link.classList.remove("active");
     });
   }
 
-  navLinks.forEach(function(link) {
-    link.addEventListener("click", function(event) {
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent the default link behavior
 
       removeActiveClass(); // Remove active class from all nav links
@@ -26,10 +26,10 @@ window.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     var fromTop = window.pageYOffset;
 
-    sections.forEach(function(section) {
+    sections.forEach(function (section) {
       var sectionId = section.getAttribute("id");
       var navLink = document.querySelector(".navbar-nav a.nav-link[href='#" + sectionId + "']");
 
@@ -48,7 +48,7 @@ window.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  backToTopBtn.addEventListener("click", function(event) {
+  backToTopBtn.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default link behavior
 
     scrollToSection(document.body);
@@ -72,10 +72,10 @@ function plusDivs(n) {
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("slide");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
+  if (n > x.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = x.length };
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndex-1].style.display = "block";
+  x[slideIndex - 1].style.display = "block";
 }

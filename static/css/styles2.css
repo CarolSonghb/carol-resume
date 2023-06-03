@@ -1,0 +1,75 @@
+/* Styles for small screens */
+
+
+@media screen and (max-width: 767px) {
+    /* header */
+    .nav-right {
+      display: block;
+      margin-right: 28px;
+      background-color: rgb(232, 237, 235, 0.8);
+      height: 30px;
+    }
+
+    .nav-right .site-title {
+        font-size: 25px;
+    }
+    
+    .resume {
+        margin: 20% auto -100px 50%;
+
+    }
+
+    .scrolldown {
+        display: none;
+    }
+
+    .nav-left {
+        margin-left:0;
+        background-color: rgb(232, 237, 235, 0.8);
+    }
+
+    .nav-item {
+        margin-bottom: -10px;
+    }
+
+    /* about */
+    .intro-container {
+        display: block;
+        margin: auto 2% auto 2%
+    }
+
+    .photo-container .img-wrapper {
+        width: 200px;
+        height: 200px;
+        margin-left: 20%;
+    }
+
+    .contact-details {
+        margin-top: 5px;
+        margin-left: 15%;
+    }
+
+    .introduction {
+        margin: 0 2% auto 2%;
+    }
+    
+    /* photography */
+    .end-container .site-title {
+        display: none;
+    }
+
+    .prev {
+        left: 100px;
+    }
+
+    .next {
+        right: 100px;
+    }
+    
+    .back-to-top {
+        padding: 5px 10px;
+    }
+}
+
+
+

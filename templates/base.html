@@ -8,8 +8,7 @@
 
 
   <!-- apply favicon  -->
-  <link rel="shortcut icon"
-    href="/static/img/favicon-16x16.png">
+  <link rel="shortcut icon" href="/static/img/favicon-16x16.png">
   <!-- use css bootstrap templates -->
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,15 +20,16 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- render the css static file -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles1.css')}}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css')}}" />
 
   {% block head %} {% endblock %}
 </head>
 
 <body>
-<h6>© CarolSong
-  <span id="currentYear">2023</span>
-</h6>
+  <h6>© CarolSong
+    <span id="currentYear">2023</span>
+  </h6>
   <header>
     <div class="nav-container" id="navbar">
       <div class="nav-left">
@@ -46,7 +46,7 @@
               <a class="nav-link" href="#section3">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#section4">Education/Skills</a>
+              <a class="nav-link" href="#section4">Skills/Education</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#section5">Photography</a>
@@ -57,7 +57,7 @@
 
 
       <div class="nav-right">
-        <div class="site-title" style="font-weight: 500;">
+        <div class="site-title">
           <a href="/">CAROL SONG</a>
         </div>
       </div>
@@ -67,9 +67,9 @@
 
 
   <main>
-    <h2 class="site-title" style="margin: 15% auto 0 10%;">MY RESUME</h2>
+    <h2 class="resume">MY RESUME</h2>
     <h5 class="scrolldown fade-in" style="margin: 8% auto 0 20%">
-    Scroll down to learn more about me</h5>
+      Scroll down to learn more about me</h5>
     <a href="/" class="button back-to-top">Back to Top</a>
 
     <section id="section1">
@@ -79,7 +79,7 @@
     <section id="section2">
       {% include 'experience.html' %}
     </section>
-    
+
     <section id="section3">
       {% include 'projects.html' %}
     </section>
@@ -101,6 +101,11 @@
 
   <!-- render the js static file -->
   <script src="/static/js/script.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
 
 
 
