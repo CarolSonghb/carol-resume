@@ -264,6 +264,7 @@ a:-webkit-any-link {
     margin-top: 8%;
     margin-left: 16%;
     color: #8c638c;
+    font-weight: 400;
 }
 
 .project-container {
