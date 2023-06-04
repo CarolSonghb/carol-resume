@@ -60,15 +60,20 @@
     }
 
     .prev {
-        left: 100px;
+        left: 80px;
     }
 
     .next {
-        right: 100px;
+        right: 80px;
     }
     
     .back-to-top {
         padding: 5px 10px;
+    }
+
+    .project-container {
+        display: block;
+
     }
 }
 
