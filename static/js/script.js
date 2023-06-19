@@ -1,4 +1,4 @@
-console.log('Hello World from Carol')
+console.log('Hello World from Carol');
 let year = document.getElementById('currentYear');
 year.innerHTML = new Date().getFullYear(); // this makes the year change
 
@@ -18,11 +18,11 @@ window.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent the default link behavior
 
-      removeActiveClass(); // Remove active class from all nav links
-      link.classList.add("active"); // Add active class to the clicked nav link
-
       var targetSection = document.querySelector(link.getAttribute("href"));
       scrollToSection(targetSection);
+
+      // Update the URL with the section's ID
+      history.pushState(null, null, '#' + targetSection.id);
     });
   });
 
@@ -36,6 +36,9 @@ window.addEventListener("DOMContentLoaded", function () {
       if (section.offsetTop <= fromTop + 60 && section.offsetTop + section.offsetHeight > fromTop + 60) {
         removeActiveClass(); // Remove active class from all nav links
         navLink.classList.add("active"); // Add active class to the corresponding nav link
+
+        // Update the URL with the section's ID
+        history.pushState(null, null, '#' + sectionId);
       } else {
         navLink.classList.remove("active"); // Remove active class from the corresponding nav link
       }
@@ -52,7 +55,19 @@ window.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); // Prevent the default link behavior
 
     scrollToSection(document.body);
+
+    // Update the URL with the homepage anchor (#)
+    history.pushState(null, null, '#');
   });
+
+  // Check the URL for a section ID and scroll to it
+  var currentHash = window.location.hash;
+  if (currentHash) {
+    var targetSection = document.querySelector(currentHash);
+    if (targetSection) {
+      scrollToSection(targetSection);
+    }
+  }
 
   function scrollToSection(section) {
     window.scrollTo({
